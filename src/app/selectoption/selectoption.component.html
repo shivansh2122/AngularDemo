@@ -1,0 +1,15 @@
+<mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>None</mat-option>
+          <mat-option [value]="para.description" *ngFor="let para of response">{{para.description}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <input type="text" [(ngModel)]="suman" />
+      <div *ngFor="let course of courses">
+        <p>{{course}}</p>
+      </div>
+      
+      <p>You selected {{selected}}</p>
+      <p>{{suman}}</p>
